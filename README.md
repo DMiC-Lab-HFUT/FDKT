@@ -37,5 +37,5 @@ For example:
 @article{liu2024fuzzykt,
   title={FDKT: Towards an interpretable deep knowledge tracing via fuzzy reasoning},
   author={Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu},
-  year={2023}
+  year={2024}
 }
