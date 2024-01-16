@@ -5,11 +5,14 @@ This is our implementation for the paper titled **FDKT: Towards an interpretable
 **Author**: Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu
 
 **Abstract**: In educational data mining, knowledge tracing (KT) aims to model learning performance based on student knowledge mastery. Deep-learning-based KT models perform remarkably better than traditional KT and have attracted considerable attention. However, most of them lack interpretability, making it challenging to explain why the model performed well in the prediction. In this paper, we propose an interpretable deep KT model, referred to as fuzzy deep knowledge tracing (FDKT) via fuzzy reasoning. Specifically, we formalize continuous scores into several fuzzy scores using the fuzzification module. Then, we input the fuzzy scores into the fuzzy reasoning module (FRM). FRM is designed to deduce the current cognitive ability, based on which the future performance was predicted. FDKT greatly enhanced the intrinsic interpretability of deep-learning-based KT through the interpretation of the deduction of student cognition. Furthermore, it broadened the application of KT to continuous scores. Improved performance with regard to both the advantages of FDKT was demonstrated through comparisons with 15 state-of-the-art models, using 4 real-world datasets.
+
+
     
 ##   Environment Settings
-### Packages
-- torch: ‘1.7.1’
-- torchnet: `pip install torchnet`
+### Dependencies
+- python==3.9
+- torch==1.7
+- torchnet
 
  ### Devices
  Our model supports running on both CPU and GPU devices. If you wish to run it on a CPU, please set `use_gpu = False` in the *config.py file*. Otherwise, please set `use_gpu = True`.
@@ -33,9 +36,14 @@ For example:
     python main.py
 ```
 
+
+### Datasets
+The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, exercise id, knowledge point id examined in the exercise, and the continuous score of the student answering the exercise.
+
+
 ##   Cite
 @article{liu2024fuzzykt,
   title={FDKT: Towards an interpretable deep knowledge tracing via fuzzy reasoning},
   author={Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu},
-  year={2024}
+  year={2023}
 }
