@@ -52,13 +52,6 @@ Data folder contains two files：`training.txt` and `testing.txt`. In each files
 ```
 The example shows the interaction record sequences of two students. Each student has three lines of data. The first line is an integer that represents the total number of interaction steps for that student. The second line represents the exercise IDs of the student's interactions at each time step. The third line represents the scores of the student's interactions at each time step.
 
-##   Cite
-@article{liu2024fuzzykt,
-  title={FDKT: Towards an interpretable deep knowledge tracing via fuzzy reasoning},
-  author={Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu},
-  year={2023}
-}
-
 
 
 ## Dataset List
@@ -91,3 +84,11 @@ We collect the commonly used datasets and listed them here. The meaning of the f
 | [Eedi_2020_Task1&2](https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip) |       ✖️       |     ✔️(tree)      |  ✔️   |       ✖️       | R2M_Eedi_20_T12          | [NeurIPS 2020 Education Challenge: Task1&2](https://eedi.com/projects/neurips-education-challenge) |
 | [Eedi_2020_Task3&4](https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip) |       ✔️(images)       |     ✔️(tree)      |  ✔️   |       ✖️       | R2M_Eedi_20_T34          | [NeurIPS 2020 Education Challenge: Task3&4](https://eedi.com/projects/neurips-education-challenge) |
 
+##   Cite
+```
+@article{liu2024fuzzykt,
+  title={FDKT: Towards an interpretable deep knowledge tracing via fuzzy reasoning},
+  author={Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu},
+  year={2023}
+}
+```
