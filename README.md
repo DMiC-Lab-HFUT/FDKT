@@ -37,9 +37,10 @@ For example:
 ```
 
 
-### Data Format
-The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, concept id, and the continuous score of the student answering the exercise.
+### Datasets
+The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, exercise id, knowledge point id examined in the exercise, and the continuous score of the student answering the exercise.
 
+ ### Data Format
 Data folder contains two files：`training.txt` and `testing.txt`. In each files, there are response records of different students included. Here is an example of the data format in each file:
 ```
 8
@@ -49,7 +50,7 @@ Data folder contains two files：`training.txt` and `testing.txt`. In each files
 5 3 2 2 5
 0.5 0.4 0.8 0.5 1.0
 ```
-The example shows the interaction record sequences of two students. Each student has three lines of data. The first line is an integer that represents the total number of interaction steps for that student. The second line represents the concept IDs of the student's interactions at each time step. The third line represents the scores of the student's interactions at each time step.
+The example shows the interaction record sequences of two students. Each student has three lines of data. The first line is an integer that represents the total number of interaction steps for that student. The second line represents the exercise IDs of the student's interactions at each time step. The third line represents the scores of the student's interactions at each time step.
 
 ##   Cite
 @article{liu2024fuzzykt,
@@ -57,3 +58,36 @@ The example shows the interaction record sequences of two students. Each student
   author={Fei Liu, Chenyang Bu, Haotian Zhang, Le Wu, Kui Yu, and Xuegang Hu},
   year={2023}
 }
+
+
+
+## Dataset List
+
+We collect the commonly used datasets and listed them here. The meaning of the fields in the table below is as follows:
+- Exercise Text: contain textual information of exercise or not
+- Concet Relation: contain relations among knowledge concepts or not (tree or prerequisite)
+- Time: contain time for students to start answering questions or not
+- Auto download: support download `middata` of the dataset  or not in EduStudio
+- R2M Script: name of script to process the rawdata into middata  in EduStudio
+
+
+
+| Dataset Name                                                 | Exercise Text | Concept Relation | Time | Auto Download | R2M Script Name          | Note                                                         |
+| :----------------------------------------------------------- | :-----------: | :--------------: | :--: | :-----------: | :----------------------- | :----------------------------------------------------------- |
+| [FrcSub](http://staff.ustc.edu.cn/~qiliuql/data/math2015.rar) |       ✖️       |        ✖️         |  ✖️   |       ✔️       | R2M_FrcSub               |                                                              |
+| [Math1](http://staff.ustc.edu.cn/~qiliuql/data/math2015.rar) |       ✖️       |        ✖️         |  ✖️   |       ✔️       | R2M_Math1                |                                                              |
+| [Math2](http://staff.ustc.edu.cn/~qiliuql/data/math2015.rar) |       ✖️       |        ✖️         |  ✖️   |       ✔️       | R2M_Math2                |                                                              |
+| [AAAI_2023](https://docs.google.com/forms/d/e/1FAIpQLScWjxiXdSMAKBtlPJZm9MsudUG9CQS16lT0GVfajpVj-mWReA/viewform?pli=1) |       ✔️       |     ✔️(tree)      |  ✔️   |       ✔️       | R2M_AAAI_2023         | [AAAI2023 Global Knowledge Tracing Challenge](https://ai4ed.cc/competitions/aaai2023competition) |
+| [ASSISTment_2009-2010](https://drive.google.com/file/d/0B2X0QD6q79ZJUFU1cjYtdGhVNjg/view?resourcekey=0-OyI8ZWxtGSAzhodUIcMf_g) |       ✖️       |        ✖️         |  ✔️   |       ✔️       | R2M_ASSIST_0910          |                                                              |
+| [ASSISTment_2012-2013](https://sites.google.com/site/assistmentsdata/datasets/2012-13-school-data-with-affect) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_ASSIST_1213          |                                                              |
+| [ASSISTment_2015-2016](https://sites.google.com/site/assistmentsdata/datasets/2015-assistments-skill-builder-data) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_ASSIST_1516          |                                                              |
+| [ASSISTment_2017](https://sites.google.com/view/assistmentsdatamining/dataset) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_ASSIST_17            |                                                              |
+| [Algebera_2005-2006](https://pslcdatashop.web.cmu.edu/KDDCup/downloads.jsp) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_Algebera_0506        | [KDD Cup 2010](https://pslcdatashop.web.cmu.edu/KDDCup/rules_data_format.jsp) |
+| [Algebera_2006-2007](https://pslcdatashop.web.cmu.edu/KDDCup/downloads.jsp) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_Algebera_0607        | [KDD Cup 2010](https://pslcdatashop.web.cmu.edu/KDDCup/rules_data_format.jsp) |
+| [Bridge2Algebra_2006-2007](https://pslcdatashop.web.cmu.edu/KDDCup/downloads.jsp) |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_Bridge2Algebra_0607  | [KDD Cup 2010](https://pslcdatashop.web.cmu.edu/KDDCup/rules_data_format.jsp) |
+| [Junyi_AreaTopicAsCpt](https://pslcdatashop.web.cmu.edu/Project?id=244) |       ✖️       |     ✔️(tree)      |  ✔️   |       ✖️       | R2M_Junyi_AreaTopicAsCpt | Area&Topic field as concept                                  |
+| [Junyi_ExerAsCpt](https://pslcdatashop.web.cmu.edu/Project?id=244) |       ✖️       | ✔️(prerequisite)  |  ✔️   |       ✖️       | R2M_Junyi_ExerAsCpt      | Exercice as concept                                          |
+| EdNet_KT1                                                    |       ✖️       |        ✖️         |  ✔️   |       ✖️       | R2M_EdNet_KT1            | [download1](http://bit.ly/ednet-content), [download2](http://bit.ly/ednet-content) |
+| [Eedi_2020_Task1&2](https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip) |       ✖️       |     ✔️(tree)      |  ✔️   |       ✖️       | R2M_Eedi_20_T12          | [NeurIPS 2020 Education Challenge: Task1&2](https://eedi.com/projects/neurips-education-challenge) |
+| [Eedi_2020_Task3&4](https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip) |       ✔️(images)       |     ✔️(tree)      |  ✔️   |       ✖️       | R2M_Eedi_20_T34          | [NeurIPS 2020 Education Challenge: Task3&4](https://eedi.com/projects/neurips-education-challenge) |
+
