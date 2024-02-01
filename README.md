@@ -12,9 +12,11 @@ Please contect [Fei Liu](feiliu@mail.hfut.edu.cn) for questions and suggestions.
     
 ##   Environment Settings
 ### Dependencies
+```
 - python==3.9
 - torch==1.7
 - torchnet
+```
 
  ### Devices
  Our model supports running on both CPU and GPU devices. If you wish to run it on a CPU, please set `use_gpu = False` in the *config.py file*. Otherwise, please set `use_gpu = True`.
