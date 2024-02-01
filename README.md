@@ -40,7 +40,7 @@ For example:
 ### Datasets
 The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, exercise id, knowledge point id examined in the exercise, and the continuous score of the student answering the exercise.
 
- ##   Data Format
+ ### Data Format
 Data folder contains two files：`training.txt` and `testing.txt`. In each files, there are response records of different students included. Here is an example of the data format in each file:
 ```
 8
