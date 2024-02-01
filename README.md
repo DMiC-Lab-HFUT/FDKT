@@ -40,21 +40,21 @@ Please contect [Fei Liu](feiliu@mail.hfut.edu.cn) for questions and suggestions.
 ### Files
 This is the code structure of the repository. It mainly includes the following files, with corresponding explanations of their functionalities:
 
-```
-- data # This file handles data loading, preprocessing, and data-related operations
+
+- data # This file handles data loading, preprocessing, and data-related operations.
   - data_deal.py
   - fdktdata.py
 - model
-  - fdkt.py # implement of the fdkt model
-  - fnn.py  # implement of the fnn network, which is used by fdkt
-- utils # This file contains utility functions used throughout the codebase
-  - mkdir.py # if the folder does not exist, create a new folder
-  - obtain_metrics.py # calculating the metrics including rmse, mae, auc
-  - write_csv.py # writing the results
-- config.py # This file stores configuration settings and parameters for the program. You can set the hyperparameters of the fdkt model in this files
-- main.py # This file contains the main code for running the program
-- README.md # This file provides documentation and instructions on how to use the codebase
-```
+  - fdkt.py # implement of the fdkt model.
+  - fnn.py  # implement of the fnn network, which is used by fdkt.
+- utils # This file contains utility functions used throughout the codebase.
+  - mkdir.py # if the folder does not exist, create a new folder.
+  - obtain_metrics.py # calculating the metrics including rmse, mae, auc.
+  - write_csv.py # writing the results.
+- config.py # This file stores configuration settings and parameters for the program. You can set the hyperparameters of the fdkt model in this files.
+- main.py # This file contains the main code for running the program.
+- README.md # This file provides documentation and instructions on how to use the codebase.
+
  
 ##   Run Steps
  If you want to run this program on the command line, please switch to the directory where main.py is located firstly.
