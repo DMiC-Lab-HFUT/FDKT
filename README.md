@@ -37,10 +37,9 @@ For example:
 ```
 
 
-### Datasets
-The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, exercise id, knowledge point id examined in the exercise, and the continuous score of the student answering the exercise.
+### Data Format
+The model has been proposed to solve the KT task in a continuous scoring scenario with subjective questions. Therefore, the dataset you use needs to include the following information: student id, concept id, and the continuous score of the student answering the exercise.
 
- ### Data Format
 Data folder contains two files：`training.txt` and `testing.txt`. In each files, there are response records of different students included. Here is an example of the data format in each file:
 ```
 8
@@ -50,7 +49,7 @@ Data folder contains two files：`training.txt` and `testing.txt`. In each files
 5 3 2 2 5
 0.5 0.4 0.8 0.5 1.0
 ```
-The example shows the interaction record sequences of two students. Each student has three lines of data. The first line is an integer that represents the total number of interaction steps for that student. The second line represents the exercise IDs of the student's interactions at each time step. The third line represents the scores of the student's interactions at each time step.
+The example shows the interaction record sequences of two students. Each student has three lines of data. The first line is an integer that represents the total number of interaction steps for that student. The second line represents the concept IDs of the student's interactions at each time step. The third line represents the scores of the student's interactions at each time step.
 
 ##   Cite
 @article{liu2024fuzzykt,
